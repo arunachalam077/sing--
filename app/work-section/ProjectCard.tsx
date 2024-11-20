@@ -1,6 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { ProjectProps } from "./projectDetails";
 import Link from "next/link";
 import Image from "next/image";
@@ -36,7 +38,7 @@ const ProjectCard = ({
       <Image
         src={image}
         alt={name}
-        className={`absolute -bottom-2 w-[70%] sm:w-[85%] md:w-[60%] lg:max-w-[55%] ${
+        className={`absolute bottom-4 w-[70%] sm:w-[85%] md:w-[60%] lg:max-w-[55%] ${
           id % 2 === 0 ? "right-0" : "left-0"
         }`}
       />
@@ -48,13 +50,13 @@ const ProjectCard = ({
         {available ? (
           <>
             <Link
-              href={github}
+              href="mailto:rupankumar111201@gmail.com"
               target="_blank"
               className="rounded-full"
-              aria-label="Open GitHub Repository"
+              aria-label="Send Email"
             >
               <FontAwesomeIcon
-                icon={faGithub}
+                icon={faEnvelope}
                 className=" w-[20px] rounded-full bg-white p-5 text-[20px] md:w-[25px] md:text-[24px] lg:w-[30px] lg:text-[28px]"
                 data-blobity
                 data-blobity-radius="38"
@@ -63,29 +65,33 @@ const ProjectCard = ({
                 data-blobity-magnetic="true"
               />
             </Link>
-            <Link href={demo} target="_blank" aria-label="Open Live Demo">
+            <Link 
+              href="https://wa.me/6582460451" 
+              target="_blank" 
+              aria-label="Contact on WhatsApp"
+            >
               <FontAwesomeIcon
-                icon={faLink}
+                icon={faPhone}
                 className=" w-[20px] rounded-full bg-white p-5 text-[20px] md:w-[25px] md:text-[24px] lg:w-[30px] lg:text-[28px]"
                 data-blobity
                 data-blobity-radius="38"
                 data-blobity-offset-x="4"
                 data-blobity-offset-y="4"
-                data-blobity-magnetic="trues"
+                data-blobity-magnetic="true"
               />
             </Link>
           </>
         ) : (
           <div className=" flex items-center justify-center gap-4">
             <Link
-              href={github}
+              href="mailto:rupankumar111201@gmail.com"
               target="_blank"
-              className="mt-1 rounded-full"
-              aria-label="Open GitHub Repository"
+              className="rounded-full"
+              aria-label="Send Email"
             >
               <FontAwesomeIcon
-                icon={faGithub}
-                className=" w-[20px]  rounded-full bg-white p-5 text-[20px] md:w-[25px] md:text-[24px] lg:w-[30px] lg:text-[28px]"
+                icon={faEnvelope}
+                className=" w-[20px] rounded-full bg-white p-5 text-[20px] md:w-[25px] md:text-[24px] lg:w-[30px] lg:text-[28px]"
                 data-blobity
                 data-blobity-radius="38"
                 data-blobity-offset-x="4"
@@ -93,11 +99,21 @@ const ProjectCard = ({
                 data-blobity-magnetic="true"
               />
             </Link>
-            <div className=" rounded-xl bg-white px-4 py-2 md:px-5 md:py-3 lg:px-6 lg:py-4">
-              <h3 className="text-[16px] md:text-[18px] lg:text-[20px] ">
-                Coming soon
-              </h3>
-            </div>
+            <Link 
+              href="https://wa.me/6582460451" 
+              target="_blank" 
+              aria-label="Contact on WhatsApp"
+            >
+              <FontAwesomeIcon
+                icon={faPhone}
+                className=" w-[20px] rounded-full bg-white p-5 text-[20px] md:w-[25px] md:text-[24px] lg:w-[30px] lg:text-[28px]"
+                data-blobity
+                data-blobity-radius="38"
+                data-blobity-offset-x="4"
+                data-blobity-offset-y="4"
+                data-blobity-magnetic="true"
+              />
+            </Link>
           </div>
         )}
       </div>

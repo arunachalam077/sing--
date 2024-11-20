@@ -11,9 +11,9 @@ const syne = Syne({
 });
 
 export const metadata: Metadata = {
-  title: "Victor Williams — Frontend Engineer",
+  title: "Rupankumar",
   description:
-    "Frontend Engineer and Web Designer, currently at Kora. Focused on interfaces and experiences, working remotely from Lagos, Nigeria.",
+    "",
   generator: "Next.js",
   applicationName: "Victor Williams",
   keywords: [
@@ -37,10 +37,10 @@ export const metadata: Metadata = {
   ],
   colorScheme: "dark",
   openGraph: {
-    title: "Victor Williams — Frontend Engineer",
+    title: "RupanKumar",
     description:
-      "Frontend Engineer and Web Designer, currently at Kora. Focused on interfaces and experiences, working remotely from Lagos, Nigeria.",
-    url: "https://www.victorwilliams.me/",
+      " ",
+    url: "",
     siteName: "www.victorwilliams.me",
     images: [
       {

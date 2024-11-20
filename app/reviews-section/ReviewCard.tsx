@@ -37,7 +37,7 @@ const BlogCard = ({
       amount: "some",
       once: true,
     }}
-      className="relative flex h-[473px] w-[100%] flex-col items-start justify-between rounded-[23px] border-[3px] border-[#212531] bg-transparent p-[28px] sm:h-[450px] sm:items-center sm:justify-start lg:h-[393px] lg:max-w-[438px] "
+      className="relative flex h-[473px] w-[330px] flex-shrink-0 flex-col items-start justify-between rounded-[23px] border-[3px] border-[#212531] bg-transparent p-[28px] sm:h-[450px] sm:w-[380px] lg:h-[393px]"
     >
       <Image
         src={slash}

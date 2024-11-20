@@ -1,10 +1,10 @@
-import Link from "next/link";
-import Image from "next/image";
-import { monaSans } from "../fonts/monaSans";
 import { motion } from "framer-motion";
-import { imageAnimation, bodyAnimation } from "../animations/animations";
-import AnimatedWords from "../animations/AnimatedWords";
+import Image from "next/image";
+import Link from "next/link";
 import profile from "../../public/profile.webp";
+import AnimatedWords from "../animations/AnimatedWords";
+import { bodyAnimation, imageAnimation } from "../animations/animations";
+import { monaSans } from "../fonts/monaSans";
 
 const Hero = () => {
   return (
@@ -18,21 +18,21 @@ const Hero = () => {
 
       <div className="absolute top-10 flex justify-between sm:w-[90%] lg:max-w-[1440px]">
         <div>
-          <Link
-            href="https://cal.com/victorwilliams/30min"
-            target="_blank"
-            aria-label="BOOK A CALL"
-          >
+        <Link
+  href="https://wa.me/6582460451"
+  target="_blank"
+  aria-label="CHAT ON WHATSAPP"
+>
             <motion.button
               className="hidden rounded-md border-2 border-[#e4ded7] py-2 px-4 text-[14px] font-semibold text-[#e4ded7] sm:block  md:text-[16px] lg:block"
               variants={bodyAnimation}
             >
-              BOOK A CALL
+              MAKE A CALL
             </motion.button>
           </Link>
         </div>
 
-        <div className="flex gap-10 text-[#e4ded7] sm:gap-12 md:gap-14 lg:gap-14">
+        {/* <div className="flex gap-10 text-[#e4ded7] sm:gap-12 md:gap-14 lg:gap-14">
           <Link
             href="https://github.com/victorcodess"
             target="_blank"
@@ -81,28 +81,26 @@ const Hero = () => {
               CO
             </motion.p>
           </Link>
-        </div>
+        </div> */}
       </div>
 
-      <div className="-mt-36 flex flex-col items-center justify-center sm:-mt-20 lg:my-40 lg:-mt-2 lg:py-40 ">
+      <div className="-mt-36 flex flex-col items-center justify-center sm:-mt-20 lg:my-40 lg:-mt-2 lg:py-40 " >
         <div
           className={`relative flex flex-col items-center justify-center ${monaSans.className}`}
         >
           <AnimatedWords
-            title="VICTOR WILLIAMS"
+            title="Rupan Kumar"
             style="inline-block overflow-hidden pt-1 -mr-4 sm:-mr-5 md:-mr-7 lg:-mr-9 -mb-1 sm:-mb-2 md:-mb-3 lg:-mb-4"
           />
           <motion.div
-            className="absolute bottom-[-110px] mx-auto sm:bottom-[-100px] md:bottom-[-130px] lg:bottom-[-150px]"
+            className="absolute bottom-[-140px] mx-auto sm:bottom-[-90px] md:bottom-[-110px] lg:bottom-[-195px]"
             variants={imageAnimation}
           >
             <Image
               src={profile}
               priority
-              alt="Victor's headshot"
-              data-blobity-tooltip="Giga Chad"
-              data-blobity-invert="false"
-              className=" w-[150px] rounded-[16px] grayscale hover:grayscale-0 md:w-[200px] md:rounded-[32px] lg:w-[245px]"
+              alt="Rupan Kumar"
+              className="w-[120px] rounded-lg transition-all duration-300 hover:grayscale sm:w-[150px] md:w-[180px] lg:w-[220px]"
             />
           </motion.div>
         </div>
@@ -118,16 +116,7 @@ const Hero = () => {
           variants={bodyAnimation}
         >
           <p className="z-50 text-center text-[16px] font-medium text-[#e4ded7] md:text-[20px] lg:text-left">
-            Frontend Engineer and Web Designer, prev at{" "}
-            <Link
-              href="https://www.korahq.com/"
-              target="_blank"
-              className="underline underline-offset-2 hover:no-underline"
-              aria-label="Kora Website"
-            >
-              Kora,
-            </Link>{" "}
-            currently available for work.
+          Developer, Designer, and Digital Strategist, working in Singapore.
           </p>
         </motion.div>
 
@@ -135,10 +124,10 @@ const Hero = () => {
           className="  hidden max-w-[500px] lg:block lg:max-w-[420px]"
           variants={bodyAnimation}
         >
-          <p className="text-right text-[16px] font-semibold text-[#e4ded7] md:text-[20px]">
+          {/* <p className="text-right text-[16px] font-semibold text-[#e4ded7] md:text-[20px]">
             Focused on interfaces and experiences, working remotely from Lagos,
             Nigeria.
-          </p>
+          </p> */}
         </motion.div>
       </div>
     </motion.section>
