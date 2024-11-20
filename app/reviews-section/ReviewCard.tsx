@@ -23,29 +23,33 @@ const BlogCard = ({
 
   return (
     <motion.div
-    initial={{ opacity: 0, y: 10 }}
-    whileInView={{
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.7,
-        delay: 0.1 * index,
-        ease: [0.44, 0, 0.22, 0.99],
-      },
-    }}
-    viewport={{
-      amount: "some",
-      once: true,
-    }}
-      className="relative flex h-[473px] w-[330px] flex-shrink-0 flex-col items-start justify-between rounded-[23px] border-[3px] border-[#212531] bg-transparent p-[28px] sm:h-[450px] sm:w-[380px] lg:h-[393px]"
+      initial={{ opacity: 0, y: 10 }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: 0.5,
+          delay: 0.05 * index,
+          ease: [0.44, 0, 0.22, 0.99],
+        },
+      }}
+      viewport={{
+        amount: "some",
+        once: true,
+      }}
+      style={{
+        willChange: "transform, opacity",
+        transform: "translate3d(0, 0, 0)",
+      }}
+      className="relative flex h-[400px] w-[280px] flex-shrink-0 flex-col items-start justify-between rounded-[23px] border-[3px] border-[#212531] bg-transparent p-[24px] sm:h-[450px] sm:w-[380px] sm:p-[28px] lg:h-[393px]"
     >
       <Image
         src={slash}
         alt={"title"}
-        className="absolute top-[34px] left-[28px] w-[51px]"
+        className="absolute top-[28px] left-[24px] w-[45px] sm:top-[34px] sm:left-[28px] sm:w-[51px]"
       />
 
-      <p className="mt-10 text-[18px] font-[500] leading-relaxed tracking-wide text-[#e4ded7]">
+      <p className="mt-8 text-[16px] font-[500] leading-relaxed tracking-wide text-[#e4ded7] sm:mt-10 sm:text-[18px]">
         {testimonial}
       </p>
 

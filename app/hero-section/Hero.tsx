@@ -93,7 +93,7 @@ const Hero = () => {
             style="inline-block overflow-hidden pt-1 -mr-4 sm:-mr-5 md:-mr-7 lg:-mr-9 -mb-1 sm:-mb-2 md:-mb-3 lg:-mb-4"
           />
           <motion.div
-            className="absolute bottom-[-140px] mx-auto sm:bottom-[-90px] md:bottom-[-110px] lg:bottom-[-195px]"
+            className="absolute bottom-[-90px] mx-auto sm:bottom-[-80px] md:bottom-[-100px] lg:bottom-[-120px]"
             variants={imageAnimation}
           >
             <Image

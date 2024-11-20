@@ -4,9 +4,22 @@ import AnimatedWords2 from "../animations/AnimatedWords2";
 import { monaSans } from "../fonts/monaSans";
 import AnimatedBody from "../animations/AnimatedBody";
 import { motion } from "framer-motion";
-import { useRef } from "react";
+import { useState, useEffect } from "react";
 
 const Reviews = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   return (
     <section className="z-10 flex w-full flex-col items-center justify-center overflow-hidden bg-[#0E1016] bg-cover bg-center pt-20 md:pb-16 lg:pb-24">
       <div
@@ -24,11 +37,17 @@ const Reviews = () => {
       <div className="w-full overflow-hidden">
         <motion.div 
           className="flex gap-4 py-4"
+          style={{
+            willChange: "transform",
+            transform: "translate3d(0, 0, 0)",
+            backfaceVisibility: "hidden",
+            WebkitBackfaceVisibility: "hidden"
+          }}
           animate={{
             x: ["0%", "-50%"],
           }}
           transition={{
-            duration: 20,
+            duration: isMobile ? 6 : 10,
             ease: "linear",
             repeat: Infinity,
           }}
